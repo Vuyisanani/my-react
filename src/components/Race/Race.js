@@ -91,7 +91,7 @@ export class Race extends Component {
                             <Container>
                                 <p>Select to Add</p>
                                 <Dropdown 
-                                placeholder='Select Jockey...' 
+                                placeholder='Select Here' 
                                 selection
                                 search
                                 value={value}
