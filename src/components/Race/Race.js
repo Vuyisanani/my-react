@@ -89,21 +89,13 @@ export class Race extends Component {
                     <div className="App-container">
                         <div className="App-dropdown">
                             <Container>
-                                <p>Select to Add</p>
-                                <Dropdown 
-                                placeholder='Select Here' 
-                                selection
-                                search
-                                value={value}
-                                options={this.state.jockeys}
-                                onChange={this.handleChange}
-                                />
+                                
                             </Container>
                         </div>
                         
-                        <div className="App-jockeys">
+                        {/* <div className="App-Arrays">
                             <ul>{lineup}</ul>
-                        </div>   
+                        </div>    */}
                     </div> 
                 </div>  
             );
