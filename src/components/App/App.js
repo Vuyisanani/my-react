@@ -1,28 +1,45 @@
 import React, { Component } from 'react';
-import Card from './card'
 import logo from '../../images/logo.svg';
-import jsonData from '../../team.json';
+import { Race } from '../Race/Race';
 import './App.css';
 
 export class App extends Component {
-  // Calling the external json (team.json) and assigning as data array
   state = {
-    data: jsonData
+    start: false,
+    startRandom: false,
+    reset: false
   }
+  
+  startClick = () => {
+    this.setState({start: true});
+  }
+
+  randomClick = () => {
+    this.setState({startRandom: true});
+  }
+
+  resetClick = () => {
+    this.setState({start: false, startRandom: false});
+  }
+
   render() {
-  console.log(jsonData); // Just printing out the array in console
+    const Buttons = () => (
+      <div className="App-buttons">
+        <button className="ui teal basic button" onClick={this.randomClick}>Choose Random Jockeys</button>
+        <button className="ui primary basic button" onClick={this.startClick}>Start</button>
+        <button className="ui button" onClick={this.resetClick}>Reset</button>
+      </div>
+    );
+    
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-          <h2 className="App-sub-title">Reacjs</h2>
+          <h1 className="App-title">React.js</h1>
         </header>
-        
-          <Card whatever={this.state.data}/>  
+        <Buttons />
+        <Race start={this.state.start} reset={this.state.reset} startRandom={this.state.startRandom}/>
       </div>
     );
-  };
-};
-
-
+  }
+}

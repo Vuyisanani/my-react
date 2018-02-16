@@ -13,7 +13,7 @@ h1, h2 {
 
 .App-header {
   background-color: #014373;
-  height: 160px;
+  height: 190px;
   padding: 20px;
   color: white;
 }
@@ -28,9 +28,95 @@ h1, h2 {
   font-weight: lighter;
 }
 
-.App-intro {
-  font-size: large;
+.App-buttons {
+  margin-top: 15px;
 }
+
+.App-buttons .button {
+  margin: 20px 40px;
+}
+
+.App-dropdown {
+  width: 50%;
+  position: relative;
+  top: 30px;
+}
+
+.App-dropdown .divider {
+  margin-bottom: 35px;
+}
+
+.App-dropdown .search{
+  margin-right: 10px; 
+}
+
+.App-jockeys {
+  width: 50%;
+  display: inline-block;
+  position: relative;
+  top: -37px;
+  left: 200px;
+}
+
+.content {
+  background-color: #DAF7A6;
+  text-align: center;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.App-jockeys .divider {
+  margin-bottom: 35px;
+}
+
+.App-jockeys p {
+margin-left: 35%;
+}
+
+.Race-racers {
+  margin-bottom: 10px;
+  margin-left: 30%;
+  text-align: left;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.App-lane {
+  margin: 0 auto;
+  background-color: #33FF93;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.App-field {
+  margin: 10px auto;
+}
+
+.App-field h3 {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.App-field img {
+  display: flex;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.App-progress {
+  position: relative;
+  left: 80px;
+  bottom: 40px;
+  border-radius: 5px;
+
+}
+
+.progressbar-progress{
+  border-radius: 5px;
+} 
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
