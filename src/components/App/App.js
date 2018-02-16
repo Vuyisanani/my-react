@@ -25,10 +25,11 @@ export class App extends Component {
   render() {
     const Buttons = () => (
       <div className="App-buttons">
-        <button className="ui teal basic button" onClick={this.randomClick}>Add to cart</button>
-        <button className="ui primary basic button" onClick={this.startClick}>Start</button>
-        <button className="ui button" onClick={this.resetClick}>Clear
-        </button>
+        {/* <button className="ui teal basic button" onClick={this.randomClick}>Add to cart</button> */}
+        <button className="ui primary basic button" onClick={this.randomClick}>Start</button>
+
+        {/* <button className="ui primary basic button" onClick={this.startClick}>Start</button> */}
+        <button className="ui button" onClick={this.resetClick}>Clear</button>
       </div>
     );
     

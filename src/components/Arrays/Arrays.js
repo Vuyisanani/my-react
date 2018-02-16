@@ -6,7 +6,7 @@ export class Arrays extends Component {
     constructor(props){
         super(props);
         this.state = {
-          interval: Math.floor(Math.random() * 500),
+          interval: Math.floor(Math.random() * 200),
           progress: 0,
         }
     }
