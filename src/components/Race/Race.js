@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Container, Dropdown, Divider  } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import 'react-promise';
-import { Jockey } from '../Jockey/Jockey';
-import data from '../../team.json';
+import { Arrays } from '../Jockey/Jockey';
+import dataJson from '../../team.json';
 
 // Selecting 5 unique random jockeys
 const uniqueArray = [];
@@ -18,7 +18,7 @@ while(uniqueArray.length < 5){
 
 const prom = new Promise( (resolve, reject) =>{
     setTimeout(() =>{
-      resolve(data);
+      resolve(dataJson);
       reject(Error);
     }, 100)
 })
@@ -37,7 +37,7 @@ export class Race extends Component {
     }
 
     handleChange = (e, { key, value }) => {
-        const x = data.map(({login, id})=>({key:id, value: login}))
+        const x = dataJson.map(({login, id})=>({key:id, value: login}))
         const index = x.findIndex(m => m.value === value); 
         y.push(index);
        
@@ -51,12 +51,11 @@ export class Race extends Component {
         if(this.props.startRandom) { // random selection
             return (
                 <div className="App-field">
-                    <p>The last one forfeits Kurtosys drinks for 2 weeks! </p>
-                    <Jockey avatar = { data[uniqueArray[0]].avatar_url } color="#FFD700" />
-                    <Jockey avatar = { data[uniqueArray[1]].avatar_url } color="#B413EC" />
-                    <Jockey avatar = { data[uniqueArray[2]].avatar_url } color="#FE9A76" />
-                    <Jockey avatar = { data[uniqueArray[3]].avatar_url } color="#008080" />
-                    <Jockey avatar = { data[uniqueArray[4]].avatar_url } color="#0E6EB8" />
+                    <Jockey avatar = { dataJson[uniqueArray[0]].avatar_url } color="#FFD700" />
+                    <Jockey avatar = { dataJson[uniqueArray[1]].avatar_url } color="#B413EC" />
+                    <Jockey avatar = { dataJson[uniqueArray[2]].avatar_url } color="#FE9A76" />
+                    <Jockey avatar = { dataJson[uniqueArray[3]].avatar_url } color="#008080" />
+                    <Jockey avatar = { dataJson[uniqueArray[4]].avatar_url } color="#0E6EB8" />
                     
                 </div>
             );
@@ -64,11 +63,11 @@ export class Race extends Component {
             return (
                 <div className="App-field">
                     <p>The last one forfeits Kurtosys drinks for 2 weeks! </p>
-                    <Jockey avatar = { data[y[0]].avatar_url } color="#FFD700" />
-                    <Jockey avatar = { data[y[1]].avatar_url } color="#B413EC" />
-                    <Jockey avatar = { data[y[2]].avatar_url } color="#FE9A76" />
-                    <Jockey avatar = { data[y[3]].avatar_url } color="#008080" />
-                    <Jockey avatar = { data[y[4]].avatar_url } color="#0E6EB8" />
+                    <Jockey avatar = { dataJson[y[0]].avatar_url } color="#FFD700" />
+                    <Jockey avatar = { dataJson[y[1]].avatar_url } color="#B413EC" />
+                    <Jockey avatar = { dataJson[y[2]].avatar_url } color="#FE9A76" />
+                    <Jockey avatar = { dataJson[y[3]].avatar_url } color="#008080" />
+                    <Jockey avatar = { dataJson[y[4]].avatar_url } color="#0E6EB8" />
                     
                 </div>
             );
@@ -107,7 +106,6 @@ export class Race extends Component {
                         </div>
                         
                         <div className="App-jockeys">
-                            <p><strong>Jockeys selected to race (No more/less than 5)</strong></p>
                             <ul>{lineup}</ul>
                         </div>   
                     </div> 

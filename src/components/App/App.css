@@ -29,21 +29,21 @@ h1, h2 {
 }
 
 .App-buttons {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .App-buttons .button {
-  margin: 20px 40px;
+  margin: 100px 300px;
 }
 
 .App-dropdown {
-  width: 50%;
+  width: 40%;
   position: relative;
-  top: 30px;
+  top: 20px;
 }
 
 .App-dropdown .divider {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .App-dropdown .search{
@@ -51,15 +51,15 @@ h1, h2 {
 }
 
 .App-jockeys {
-  width: 50%;
+  width: 40%;
   display: inline-block;
   position: relative;
-  top: -37px;
-  left: 200px;
+  top: -36px;
+  left: 150px;
 }
 
 .content {
-  background-color: #DAF7A6;
+  background-color: green;
   text-align: center;
   border-radius: 3px;
   padding: 10px;
@@ -83,7 +83,7 @@ margin-left: 35%;
 
 .App-lane {
   margin: 0 auto;
-  background-color: #33FF93;
+  background-colo:red;
   width: 100%;
   height: 100%;
   padding-top: 10px;

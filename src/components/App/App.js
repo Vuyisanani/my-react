@@ -25,9 +25,10 @@ export class App extends Component {
   render() {
     const Buttons = () => (
       <div className="App-buttons">
-        <button className="ui teal basic button" onClick={this.randomClick}>Choose Random Jockeys</button>
+        <button className="ui teal basic button" onClick={this.randomClick}>Add to cart</button>
         <button className="ui primary basic button" onClick={this.startClick}>Start</button>
-        <button className="ui button" onClick={this.resetClick}>Reset</button>
+        <button className="ui button" onClick={this.resetClick}>Clear
+        </button>
       </div>
     );
     
@@ -35,7 +36,8 @@ export class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">React.js</h1>
+          <h1 className="App-title">Welcome to the Horse Racing</h1>
+          <p> This is for Kurtosys Implementation Team racing </p>
         </header>
         <Buttons />
         <Race start={this.state.start} reset={this.state.reset} startRandom={this.state.startRandom}/>

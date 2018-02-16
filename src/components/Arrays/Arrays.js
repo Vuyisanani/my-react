@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Progress from 'react-progressbar';
 
-export class Jockey extends Component {
+export class Arrays extends Component {
 
     constructor(props){
         super(props);
@@ -17,7 +17,6 @@ export class Jockey extends Component {
 
     timer = () => {
         this.setState({ progress: this.state.progress + 1 });
-        console.log("anyhting");
         
         (this.state.progress >= 99) ? this.setState({ progress: 100 }) : "" ;
     }
