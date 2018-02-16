@@ -61,7 +61,6 @@ export class Race extends Component {
         } else  if(this.props.start) {
             return (
                 <div className="App-field">
-                    <p>The last one forfeits Kurtosys drinks for 2 weeks! </p>
                     <Arrays avatar = { dataJson[y[0]].avatar_url } color="#FFD700" />
                     <Arrays avatar = { dataJson[y[1]].avatar_url } color="#B413EC" />
                     <Arrays avatar = { dataJson[y[2]].avatar_url } color="#FE9A76" />
@@ -71,9 +70,7 @@ export class Race extends Component {
                 </div>
             );
         }else{ 
-            /** default display (note: Realized late that I misunderstood the basic requirements. Only 
-            randomness is required. I implemented a non-required option for selection here) */
-
+        
             const r = this.state.nextRacers;
             const lineup = r.map((list) => 
                 <li className="Race-racers">
@@ -92,7 +89,7 @@ export class Race extends Component {
                     <div className="App-container">
                         <div className="App-dropdown">
                             <Container>
-                                <p>Add jockeys to the race in the dropdown below (and click Start)</p>
+                                <p>Select to Add</p>
                                 <Dropdown 
                                 placeholder='Select Jockey...' 
                                 selection
